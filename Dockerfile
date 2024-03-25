@@ -6,7 +6,12 @@ COPY ./req.txt /code/req.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/req.txt
 
-COPY ./app /code/
+COPY ./fine_tuned_model ./code/fine_tuned_model
+
+COPY ./model.py /code/model.py
+
+COPY ./main.py /code/main.py
+
 
 EXPOSE 8080
 
